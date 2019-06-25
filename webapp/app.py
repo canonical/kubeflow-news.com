@@ -1,17 +1,13 @@
-import os
 import flask
 from canonicalwebteam.flask_base.app import FlaskBase
 
 from canonicalwebteam.templatefinder import TemplateFinder
 
-dir_path = os.path.dirname(os.path.abspath(__file__))
-app_dir = os.path.dirname(dir_path)
-templates_dir = os.path.join(app_dir, "templates")
 
 app = FlaskBase(
     __name__,
     "kubeflow-news.com",
-    template_folder=templates_dir,
+    template_folder="../templates",
     static_folder="../static",
 )
 
