@@ -12,9 +12,9 @@ app = FlaskBase(
 
 blog = BlogExtension(
   app,
-  "ubuntu.com",
-  [],
-  "tag_name",
+  "kubeflow-news.com",
+  [3408],
+  "kubeflow-news",
   "/",
   [3184, 3265]
 )
