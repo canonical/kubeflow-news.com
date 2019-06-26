@@ -1,11 +1,17 @@
-<h1>Archives</h1>
+{% extends "base.html" %}
 
-{% for article in articles %}
-  <ul>
-    <li>
-      <a href="/{{article.slug}}">
-        <h2>{{ article.title.rendered|safe }}</h1>
-      </a>
-    </li>
-  </ul>
-{% endfor %}
+{% block title %}Archives{% endblock %}
+
+{% block content %}
+  <h1>Archives</h1>
+
+  {% for article in articles %}
+    <ul>
+      <li>
+        <a href="/{{article.slug}}">
+          <h2>{{ article.title.rendered|safe }}</h1>
+        </a>
+      </li>
+    </ul>
+  {% endfor %}
+{% endblock %}

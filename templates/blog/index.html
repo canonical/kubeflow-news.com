@@ -1,3 +1,5 @@
-{% for article in articles[0:1] %}
-  {% include 'blog/article.html' %}
-{% endfor %}
+{% block content %}
+  {% for article in articles[0:1] %}
+    {% include 'blog/article.html' %}
+  {% endfor %}
+{% endblock %}

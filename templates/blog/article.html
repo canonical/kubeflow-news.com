@@ -1,6 +1,12 @@
-<article>
-  <h1>{{ article.title.rendered|safe }}</h1>
-  <div>
-    {{ article.content.rendered|safe }}
-  </div>
-</article>
+{% extends "base.html" %}
+
+{% block title %}{{ article.title.rendered|safe }}{% endblock %}
+
+{% block content %}
+  <article>
+    <h1>{{ article.title.rendered|safe }}</h1>
+    <div>
+      {{ article.content.rendered|safe }}
+    </div>
+  </article>
+{% endblock %}
