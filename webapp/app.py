@@ -1,6 +1,5 @@
-# Packages
+from canonicalwebteam.blog.app import BlogExtension
 from canonicalwebteam.flask_base.app import FlaskBase
-from canonicalwebteam.templatefinder import TemplateFinder
 
 
 app = FlaskBase(
@@ -12,6 +11,7 @@ app = FlaskBase(
     template_500="500.html",
 )
 
-template_finder_view = TemplateFinder.as_view("template_finder")
-app.add_url_rule("/", view_func=template_finder_view)
-app.add_url_rule("/<path:subpath>", view_func=template_finder_view)
+
+blog = BlogExtension(
+    app, "kubeflow-news.com", [3408], "kubeflow-news", "/", [3184, 3265]
+)

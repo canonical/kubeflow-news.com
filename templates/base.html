@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html class="{% block extra_html_class %}{% endblock %}" lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{% block title %}{{ title }}{% endblock %} | Kubeflow News</title>
+  </head>
+
+  <body class="{% block body_class %}{% endblock %}">
+    {% include '_navigation.html' %}
+
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+  </body>
+</html>
