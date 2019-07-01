@@ -1,4 +1,6 @@
 {
+  "author": "Canonical webteam",
+  "license": "LGPL v3",
   "scripts": {
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle",
     "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
@@ -14,6 +16,7 @@
     "node-sass": "4.11.0",
     "postcss-cli": "6.1.2",
     "sass-lint": "1.13.1",
+    "vanilla-framework": "^2.0.1",
     "watch-cli": "0.2.3"
   }
 }
