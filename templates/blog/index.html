@@ -1,5 +1,9 @@
+{% extends 'base.html' %}
+
 {% block content %}
+  {% include 'blog/_newsletter-signup.html' %}
+
   {% for article in articles[0:1] %}
-    {% include 'blog/article.html' %}
+    {% include 'blog/_post.html' %}
   {% endfor %}
 {% endblock %}
