@@ -1,29 +1,34 @@
-<div>
-  <header>
-    <h2>Newsletter Signup</h2>
-  </header>
+<section class="p-strip--dark" style="background-color: #23367C;">
+  <div class="row">
+    <div class="col-12">
+      <header>
+        <h1>Kubeflow news</h1>
+        <h2 class="p-heading--four">Subscribe to our weekly newsletter<br /> and get the highlights in your inbox every week</h2>
+      </header>
 
-  <div>
-    <form action="https://pages.canonical.com/index.php/leadCapture/save" method="post" id="mktoForm_3415">
-    
       <div>
-        <label for="Email">Email:*</label>
-        <input id="Email" name="Email" maxlength="255" type="email" required />
+        <form action="https://pages.canonical.com/index.php/leadCapture/save" method="post" id="mktoForm_3415">
+        
+          <div>
+            <label class="u-off-screen" for="Email">Work email:*</label>
+            <input id="Email" placeholder="Work email" name="Email" maxlength="255" type="email" required />
+          </div>
+
+          <p>
+            <input type="hidden" name="Consent_to_Processing__c" value="Yes" />
+            <button type="submit">Subscribe now</button>
+          </p>
+
+          <input type="hidden" name="formid" value="3415" />
+          <input type="hidden" name="lpId" value="" />
+          <input type="hidden" name="munchkinId" value="066-EOV-335" />
+          <input type="hidden" name="lpurl" value="" />
+          <input type="hidden" name="ret" value="{{ request.url}}?newsletter=true" />
+          <input type="hidden" name="cr" value="" />
+          <input type="hidden" name="kw" value="" />
+          <input type="hidden" name="q" value="" />
+        </form>
       </div>
-
-      <p>
-        <input type="hidden" name="Consent_to_Processing__c" value="Yes" />
-        <button type="submit">Subscribe now</button>
-      </p>
-
-      <input type="hidden" name="formid" value="3415" />
-      <input type="hidden" name="lpId" value="" />
-      <input type="hidden" name="munchkinId" value="066-EOV-335" />
-      <input type="hidden" name="lpurl" value="" />
-      <input type="hidden" name="ret" value="{{ request.url}}?newsletter=true" />
-      <input type="hidden" name="cr" value="" />
-      <input type="hidden" name="kw" value="" />
-      <input type="hidden" name="q" value="" />
-    </form>
+    </div>
   </div>
 </div>
