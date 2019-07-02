@@ -1,5 +1,11 @@
-<div>
-  <h3>{{ article.title.rendered|safe }}</h3>
-  <p>{{ article.excerpt.raw|safe }}</p>
-  <a href="{{ article.slug }}">Read more ></a>
+<div class="row">
+  <div class="col-8">
+    <h3>{{ article.title.rendered|safe }}</h3>
+    <p>{{ article.excerpt.raw|safe }}</p>
+    <a href="{{ article.slug }}">Read more&nbsp;&rsaquo;</a>
+  </div>
+
+  <div class="col-4">
+    
+  </div>
 </div>
