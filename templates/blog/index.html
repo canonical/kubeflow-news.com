@@ -3,10 +3,10 @@
 {% block content %}
   {% include 'blog/_newsletter-signup.html' %}
 
-  <section class="p-strip">
+  <section class="p-strip is-bordered">
     <div class="row">
       <div class="col-12">
-        <h2>Latest</h2>
+        <h2>This week's news</h2>
         {% for article in articles[0:1] %}
           {% include 'blog/_card.html' %}
         {% endfor %}
@@ -17,11 +17,15 @@
   <section class="p-strip">
     <div class="row">
       <div class="col-12">
-        <h2>Previous week's news</h2>
+        <h2>Previous weeks news</h2>
         
         {% for article in articles[1:5] %}
           {% include 'blog/_card.html' %}
+
+          <hr class="u-sv3" />
         {% endfor %}
+
+        <a class="p-button" href="/archives">See all</a>
       </div>
     </div>
   </section>
