@@ -3,16 +3,16 @@
 {% block content %}
   {% include 'blog/_newsletter-signup.html' %}
 
-  {% for article in articles[0:1] %}
-    <section class="p-strip">
-      <div class="row">
-        <div class="col-12">
-          <h2>Latest</h2>
+  <section class="p-strip">
+    <div class="row">
+      <div class="col-12">
+        <h2>Latest</h2>
+        {% for article in articles[0:1] %}
           {% include 'blog/_card.html' %}
-        </div>
+        {% endfor %}
       </div>
-    </section>
-  {% endfor %}
+    </div>
+  </section>
   
   <section class="p-strip">
     <div class="row">
