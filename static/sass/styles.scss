@@ -1,3 +1,9 @@
 @charset "UTF-8";
 
+@import "settings_colors";
+
 @import "vanilla-framework/scss/build";
+
+@import "pattern_footer";
+
+@include kubeflow-news-p-footer;
