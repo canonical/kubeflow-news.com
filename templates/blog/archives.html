@@ -3,15 +3,47 @@
 {% block title %}Archives{% endblock %}
 
 {% block content %}
-  <h1>Archives</h1>
+  <section class="p-strip--light">
+    <div class="row u-equal-height u-vertically-center">
+      <div class="col-10">
+        <h1>
+          Archives
+        </h1>
+        <p>
+          {{ total_posts }} post{{ total_posts|pluralize }}
+        </p>
+      </div>
+    </div>
+  </section>
 
-  {% for article in articles %}
-    <ul>
-      <li>
-        <a href="/{{article.slug}}">
-          <h2>{{ article.title.rendered|safe }}</h1>
-        </a>
-      </li>
-    </ul>
-  {% endfor %}
+  <section class="p-strip">
+    <div class="row">
+      <div class="col-8">
+        {% for article in articles %}
+        <div class="p-media-object">
+          <div class="p-media-object__details">
+            <p class="p-media-object__title">
+              {{ article.title.rendered|safe }}
+            </p>
+            <div class="p-media-object__content">
+              <p>By {{ article.author.name }}, {{ article.date }}</p>
+              <p>{{ article.excerpt.raw|safe }}</p>
+              <p>
+                <a href="/{{ article.slug }}">kubeflow-news.com/{{ article.slug | reverse }}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="col-4">
+        <h3>Archives</h3>
+        <ul class="p-list">
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}
