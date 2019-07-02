@@ -3,30 +3,34 @@
 {% block content %}
   {% include 'blog/_newsletter-signup.html' %}
 
-  <section class="p-strip is-bordered">
-    <div class="row">
-      <div class="col-12">
-        <h2>This week's news</h2>
-        {% for article in articles[0:1] %}
-          {% include 'blog/_card.html' %}
-        {% endfor %}
+  {% if articles|length > 0 %}
+    <section class="p-strip is-bordered">
+      <div class="row">
+        <div class="col-12">
+          <h2>This week's news</h2>
+          {% for article in articles[0:1] %}
+            {% include 'blog/_card.html' %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  {% endif %}
   
-  <section class="p-strip">
-    <div class="row">
-      <div class="col-12">
-        <h2>Previous weeks news</h2>
-        
-        {% for article in articles[1:5] %}
-          {% include 'blog/_card.html' %}
+  {% if articles|length > 1 %}
+    <section class="p-strip">
+      <div class="row">
+        <div class="col-12">
+          <h2>Previous weeks news</h2>
+          
+          {% for article in articles[1:5] %}
+            {% include 'blog/_card.html' %}
 
-          <hr class="u-sv3" />
-        {% endfor %}
+            <hr class="u-sv3" />
+          {% endfor %}
 
-        <a class="p-button" href="/archives">See all</a>
+          <a class="p-button" href="/archives">See all</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  {% endif %}
 {% endblock %}
