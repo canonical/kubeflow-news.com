@@ -20,8 +20,10 @@
   <body class="{% block body_class %}{% endblock %}">
     {% include '_navigation.html' %}
 
-    <main>
-      {% block content %}{% endblock content %}
+    <main class="u-no-margin--top">
+      <div id="main-content">
+        {% block content %}{% endblock content %}
+      </div>
     </main>
   </body>
 </html>
