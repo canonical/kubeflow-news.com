@@ -4,6 +4,8 @@
 
 @import "vanilla-framework/scss/build";
 
+@import "pattern_buttons";
 @import "pattern_footer";
 
+@include kubeflow-news-p-buttons;
 @include kubeflow-news-p-footer;
