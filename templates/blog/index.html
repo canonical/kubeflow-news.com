@@ -3,13 +3,26 @@
 {% block content %}
   {% include 'blog/_newsletter-signup.html' %}
 
-  {% for article in articles[0:5] %}
-    {% if loop.index == 1 %}
-      <h2>Latest</h2>
-    {% elif loop.index == 2 %}
-      <h2>Previous week's news</h2>
-    {% endif %}  
-
-    {% include 'blog/_card.html' %}
+  {% for article in articles[0:1] %}
+    <section class="p-strip">
+      <div class="row">
+        <div class="col-12">
+          <h2>Latest</h2>
+          {% include 'blog/_card.html' %}
+        </div>
+      </div>
+    </section>
   {% endfor %}
+  
+  <section class="p-strip">
+    <div class="row">
+      <div class="col-12">
+        <h2>Previous week's news</h2>
+        
+        {% for article in articles[1:5] %}
+          {% include 'blog/_card.html' %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 {% endblock %}
