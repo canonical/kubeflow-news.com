@@ -3,7 +3,13 @@
 {% block content %}
   {% include 'blog/_newsletter-signup.html' %}
 
-  {% for article in articles[0:1] %}
-    {% include 'blog/_post.html' %}
+  {% for article in articles[0:5] %}
+    {% if loop.index == 1 %}
+      <h2>Latest</h2>
+    {% elif loop.index == 2 %}
+      <h2>Previous week's news</h2>
+    {% endif %}  
+
+    {% include 'blog/_card.html' %}
   {% endfor %}
 {% endblock %}
