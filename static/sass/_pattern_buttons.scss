@@ -4,5 +4,10 @@
     border-color: #496AF8;
     border-radius: 20px;
     color: #fff;
+    min-width: 170px;
+
+    &:visited {
+      color: #fff;
+    }
   }
 }
