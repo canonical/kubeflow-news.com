@@ -1,9 +1,9 @@
-<section class="p-strip--dark" style="background-color: #23367C;">
+<section class="p-strip--dark is-deep p-strip--newsletter">
   <div class="row">
     <div class="col-12">
       <header>
         <h1>Kubeflow news</h1>
-        <h2 class="p-heading--four">Subscribe to our weekly newsletter<br /> and get the highlights in your inbox every week</h2>
+        <p class="p-heading--four">Subscribe to our weekly newsletter<br /> and get the highlights in your inbox every week</p>
       </header>
 
       <div>
@@ -14,7 +14,11 @@
             <input id="Email" placeholder="Work email" name="Email" maxlength="255" type="email" required />
           </div>
 
-          <p>
+          <p class="u-margin-medium--top">
+            <small>In submitting this form, I confirm that I have read and agree to <a href="/legal/data-privacy/newsletter">Canonical’s Privacy Notice</a> and <a href="/legal/data-privacy">Privacy Policy</a>.</small>
+          </p>
+
+          <p class="u-no-margin--bottom">
             <input type="hidden" name="Consent_to_Processing__c" value="Yes" />
             <button class="p-button" type="submit">Subscribe now</button>
           </p>

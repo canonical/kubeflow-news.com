@@ -1,0 +1,8 @@
+@mixin kubeflow-news-p-strip {
+  .p-strip--newsletter {
+    background-blend-mode: overlay;
+    background-color: $color-brand;
+    background-image: url("https://assets.ubuntu.com/v1/0c19ad2a-kubeflownews-bckg.png");
+    background-size: cover;
+  }
+}

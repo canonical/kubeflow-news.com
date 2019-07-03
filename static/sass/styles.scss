@@ -6,6 +6,8 @@
 
 @import "pattern_buttons";
 @import "pattern_footer";
+@import "pattern_strip";
 
 @include kubeflow-news-p-buttons;
 @include kubeflow-news-p-footer;
+@include kubeflow-news-p-strip;
