@@ -4,21 +4,23 @@
   {% include 'blog/_newsletter-signup.html' %}
 
   {% if articles|length > 0 %}
-    <section class="p-strip is-shallow">
+    <section class="p-strip u-no-padding--bottom">
       <div class="row">
         <div class="col-12">
           <h2>This week's news</h2>
           <hr />
-          {% for article in articles[0:1] %}
-            {% include 'blog/_card_hero.html' %}
-          {% endfor %}
+          <div class="row">
+            {% for article in articles[0:1] %}
+              {% include 'blog/_card_hero.html' %}
+            {% endfor %}
+          </div>
         </div>
       </div>
     </section>
   {% endif %}
   
   {% if articles|length > 1 %}
-    <section class="p-strip is-shallow">
+    <section class="p-strip">
       <div class="row">
         <div class="col-12">
           <h2>Previous weeks news</h2>
@@ -33,8 +35,8 @@
               {% endif %}
             {% endfor %}
           </div>
-
-          <a class="p-button" href="/archives">See all</a>
+          
+          <a class="p-button u-no-margin--bottom" href="/archives">See all</a>
         </div>
       </div>
     </section>
