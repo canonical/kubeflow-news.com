@@ -1,5 +1,11 @@
 @mixin kubeflow-news-p-navigation {
-  .p-navigation__logo {
-    font-weight: 500;
+  .p-navigation {
+    &__logo {
+      font-weight: 500;
+    }
+
+    .row {
+      grid-gap: 0;
+    }
   }
 }
