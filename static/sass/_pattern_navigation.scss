@@ -4,6 +4,12 @@
       font-weight: 500;
     }
 
+    &__link a::before {
+      @media (min-width: $breakpoint-medium) {
+        display: none;
+      }
+    }
+
     .row {
       grid-gap: 0;
     }
