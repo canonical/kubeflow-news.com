@@ -1,13 +1,5 @@
-<div class="row">
-  <div class="col-8">
-    <h3>{{ article.title.rendered|safe }}</h3>
-    <p>{{ article.excerpt.raw|safe }}</p>
-    <a href="{{ article.slug }}">Read more&nbsp;&rsaquo;</a>
-  </div>
-
-  <div class="col-4">
-    {% if article.image and article.image.source_url %}
-      <img src="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_460/{{ article.image.source_url }}" srcset="https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_460/{{ article.image.source_url }} 460w, https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_620/{{ article.image.source_url }} 620w, https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_875/{{ article.image.source_url }} 875w" sizes="(min-width: 1031px) 460px, (max-width: 1030px) and (min-width: 876px) 460px, (max-width: 875px) and (min-width: 621px) 875px, (max-width: 620px) and (min-width: 461px) 620px, (max-width: 460px) 460px" alt="" />
-    {% endif %}
-  </div>
+<div class="col-6">
+  <h3>{{ article.title.rendered|safe }}</h3>
+  <p>{{ article.excerpt.raw|safe }}</p>
+  <a href="{{ article.slug }}">Read more&nbsp;&rsaquo;</a>
 </div>
