@@ -1,0 +1,23 @@
+@mixin kubeflow-news-p-card {
+  .p-card {
+    border: none;
+    
+    @media (max-width: $breakpoint-medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:nth-child(odd) {
+      padding-left: 0;
+    }
+
+    &:nth-child(even) {
+      padding-right: 0;
+    }
+
+    &:only-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
