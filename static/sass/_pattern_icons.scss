@@ -1,7 +1,8 @@
 @mixin kubeflow-news-p-icon-facebook {
   .p-icon--facebook {
     @extend %social-icon;
-    @include vf-icon-facebook(#ffffff);
+    @include vf-icon-facebook(#fff);
+
     &:hover {
       @include vf-icon-facebook(#3b5998);
     }
@@ -11,7 +12,8 @@
 @mixin kubeflow-news-p-icon-twitter {
   .p-icon--twitter {
     @extend %social-icon;
-    @include vf-icon-twitter(#ffffff);
+    @include vf-icon-twitter(#fff);
+
     &:hover {
       @include vf-icon-twitter(#1da1f2);
     }

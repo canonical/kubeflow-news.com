@@ -47,4 +47,3 @@ def months_list_filter(year):
         if date < now.date():
             months.append({"name": date.strftime("%b"), "number": i})
     return months
-
