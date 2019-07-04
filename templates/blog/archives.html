@@ -3,7 +3,7 @@
 {% block title %}Archives{% endblock %}
 
 {% block content %}
-  <header class="p-strip--dark" style="background-color: #23367C;">
+  <header class="p-strip--dark p-strip--newsletter">
     <div class="row">
       <div class="col-10">
         <h1>Archives</h1>
@@ -21,7 +21,7 @@
         <div class="p-media-object">
           <div class="p-media-object__details">
             <p class="p-media-object__title">
-              {{ article.title.rendered|safe }}
+              <a>{{ article.title.rendered|safe }}</a>
             </p>
             <div class="p-media-object__content">
               <p>By {{ article.author.name }}, {{ article.date }}</p>
@@ -32,6 +32,7 @@
             </div>
           </div>
         </div>
+        <hr>
         {% endfor %}
       </div>
 
