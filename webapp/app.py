@@ -15,11 +15,16 @@ app = FlaskBase(
 
 blog = BlogExtension(
     # app, "kubeflow-news.com", [3408], "kubeflow-news", "/", [3184, 3265]
-    app, "kubeflow-news.com", [2510], "ai", "/", [3184, 3265,]
+    app,
+    "kubeflow-news.com",
+    [2510],
+    "ai",
+    "/",
+    [3184, 3265],
 )
 
 
-@app.template_filter('pluralize')
+@app.template_filter("pluralize")
 def pluralize_filter(total_posts):
     if int(total_posts) > 1:
         return "s"
@@ -27,13 +32,13 @@ def pluralize_filter(total_posts):
         return ""
 
 
-@app.template_filter('descending_years')
+@app.template_filter("descending_years")
 def descending_years_filter(end_year):
     now = datetime.datetime.now()
     return range(now.year, end_year, -1)
 
 
-@app.template_filter('months_list')
+@app.template_filter("months_list")
 def months_list_filter(year):
     months = []
     now = datetime.datetime.now()
