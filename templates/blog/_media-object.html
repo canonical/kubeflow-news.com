@@ -6,7 +6,7 @@
 
     <div class="p-media-object__content">
       <p>{{ article.date }}</p>
-      <p>{{ article.excerpt.raw|safe }}</p>
+      <p>{{ article.excerpt.raw|replace('[…]', '…')|truncate(235) }}</p>
       <a href="{{ article.slug }}">Read more&nbsp;&rsaquo;</a>
     </div>
   </div>
