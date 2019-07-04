@@ -8,8 +8,10 @@
 @import "pattern_footer";
 @import "pattern_navigation";
 @import "pattern_strip";
+@import "pattern_separator";
 
 @include kubeflow-news-p-buttons;
 @include kubeflow-news-p-footer;
 @include kubeflow-news-p-navigation;
 @include kubeflow-news-p-strip;
+@include kubeflow-news-p-separator;
