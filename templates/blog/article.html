@@ -3,7 +3,7 @@
 {% block title %}{{ article.title.rendered|safe }}{% endblock %}
 
 {% block content %}
-  <header class="p-strip--dark p-strip--newsletter">
+  <header class="p-strip--dark p-strip--newsletter" style="text-align: left">
     <div class="row">
       <div class="col-8">    
         <h1>{{ article.title.rendered|safe }}</h1>
@@ -14,23 +14,25 @@
         <h2 class="p-heading--four">By {{ article.author.name }}, {{ article.date }}</h2>
       </div>
       <div class="col-4 ">
-        <ul class="p-inline-list">
-          <li class="p-inline-list__item p-heading--four">
-            Share on
+        <ul class="p-inline-list u-equal-height">
+          <li class="p-inline-list__item u-vertically-center">
+            <p class="p-heading--four u-vertically-center">
+              Share on
+            </p>
           </li>
-          <li class="p-inline-list__item">
-            <a class="p-icon--facebook" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=https://www.ubuntu.com/blog/{{ article.slug }}">
-              Facebook
+          <li class="p-inline-list__item u-vertically-center">            
+            <a class="p-icon--linkedin" title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ubuntu.com/blog/{{ article.slug }}&amp;title={{ article.title.rendered|safe|urlencode }}">
+              LinkedIn
             </a>
           </li>
-          <li class="p-inline-list__item">
+          <li class="p-inline-list__item u-vertically-center">
             <a class="p-icon--twitter" title="Share on Twitter" href="http://twitter.com/share?text={{ article.title.rendered|safe|urlencode }}&amp;url=https://www.ubuntu.com/blog/{{ article.slug }}&amp;hashtags=ubuntu">
               Twitter
             </a>
           </li>
-          <li class="p-inline-list__item">
-            <a class="p-icon--linkedin" title="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ubuntu.com/blog/{{ article.slug }}&amp;title={{ article.title.rendered|safe|urlencode }}">
-              LinkedIn
+          <li class="p-inline-list__item u-vertically-center">            
+            <a class="p-icon--facebook" title="Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=https://www.ubuntu.com/blog/{{ article.slug }}">
+            Facebook
             </a>
           </li>
         </ul>
