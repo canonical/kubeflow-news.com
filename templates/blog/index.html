@@ -3,21 +3,19 @@
 {% block content %}
   {% include 'blog/_newsletter-signup.html' %}
 
-  {% if articles|length > 0 %}
-    <section class="p-strip u-no-padding--bottom">
-      <div class="row">
-        <div class="col-12">
-          <h2>This week's news</h2>
-          <hr />
-          <div class="row">
-            {% for article in articles[0:1] %}
-              {% include 'blog/_card_hero.html' %}
-            {% endfor %}
-          </div>
+  <section class="p-strip u-no-padding--bottom">
+    <div class="row">
+      <div class="col-12">
+        <h2>This week's news</h2>
+        <hr />
+        <div class="row">
+          {% for article in articles[0:1] %}
+            {% include 'blog/_media-object_hero.html' %}
+          {% endfor %}
         </div>
       </div>
-    </section>
-  {% endif %}
+    </div>
+  </section>
   
   {% if articles|length > 1 %}
     <section class="p-strip">
@@ -27,10 +25,13 @@
           <hr />
           <div class="row">
             {% for article in articles[1:5] %}
-              {% include 'blog/_card.html' %}
-              
+              <div class="col-6">
+                {% include 'blog/_media-object.html' %}
+                <hr class="u-hide--medium u-hide--large" />
+              </div>
               {% if loop.index % 2 == 0 %}
                 </div>
+                <hr class="u-hide--small" />
                 <div class="row">
               {% endif %}
             {% endfor %}

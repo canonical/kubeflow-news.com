@@ -1,0 +1,13 @@
+<div class="p-media-object">
+  <div class="p-media-object__details">
+    <h3 class="p-heading--four p-media-object__title">
+      <a href="{{ article.slug }}">{{ article.title.rendered|safe }}</a>
+    </h3>
+
+    <div class="p-media-object__content">
+      <p>By {{ article.author.name }}, {{ article.date }}</p>
+      <p>{{ article.excerpt.raw|safe }}</p>
+      <a href="{{ article.slug }}">Read more&nbsp;&rsaquo;</a>
+    </div>
+  </div>
+</div>
