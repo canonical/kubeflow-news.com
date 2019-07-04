@@ -6,6 +6,11 @@
     color: #fff;
     min-width: 170px;
 
+    &:hover {
+      background-color: #1257f1;
+      border-color: #1257f1;
+    }
+
     &:visited {
       color: #fff;
     }
