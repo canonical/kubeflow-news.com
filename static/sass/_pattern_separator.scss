@@ -1,9 +1,5 @@
 @mixin kubeflow-news-p-separator {
   .p-separator {
-    margin: $spv-outer--regular-scaleable 0;
-
-    @media (max-width: $breakpoint-medium) {
-      margin: $spv-outer--shallow-scaleable 0;
-    }
+    margin: $spv-outer--shallow-scaleable 0;
   }
 }

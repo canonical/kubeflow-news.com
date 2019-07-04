@@ -17,8 +17,8 @@ blog = BlogExtension(
     # app, "kubeflow-news.com", [3408], "kubeflow-news", "/", [3184, 3265]
     app,
     "kubeflow-news.com",
-    [2510],
-    "ai",
+    [1239],
+    "design",
     "/",
     [3184, 3265],
 )
@@ -47,4 +47,3 @@ def months_list_filter(year):
         if date < now.date():
             months.append({"name": date.strftime("%b"), "number": i})
     return months
-

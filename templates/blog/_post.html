@@ -1,13 +1,15 @@
-<article class="p-strip">
-  <div class="row">
-    <div class="col-8">
-      {{ article.content.rendered|safe }}
-      {% include '/blog/_card-related-post.html' %}
-    </div>
-    <div class="col-4">
-      <div style="position: sticky; top: 2rem;">
-        {% include '/blog/_newsletter-signup-form.html' %}
+<div id="main-content">
+  <article class="p-strip">
+    <div class="row">
+      <div class="col-7">
+        {{ article.content.rendered|safe }}
+        {% include '/blog/_card-related-post.html' %}
+      </div>
+      <div class="col-4 col-start-large-9">
+        <div style="position: sticky; top: 2rem;">
+          {% include '/blog/_newsletter-signup-form.html' %}
+        </div>
       </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>
