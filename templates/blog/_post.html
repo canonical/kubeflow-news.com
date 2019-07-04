@@ -1,6 +1,13 @@
-<article>
-  <h1>{{ article.title.rendered|safe }}</h1>
-  <div>
-    {{ article.content.rendered|safe }}
+<article class="p-strip">
+  <div class="row">
+    <div class="col-8">
+      {{ article.content.rendered|safe }}
+      {% include '/blog/_card-related-post.html' %}
+    </div>
+    <div class="col-4">
+      <div style="position: sticky; top: 2rem;">
+        {% include '/blog/_newsletter-signup-form.html' %}
+      </div>
+    </div>
   </div>
 </article>

@@ -9,9 +9,14 @@
 @import "pattern_navigation";
 @import "pattern_strip";
 @import "pattern_separator";
+@import "pattern_card";
+@import "pattern_icons";
 
 @include kubeflow-news-p-buttons;
 @include kubeflow-news-p-footer;
 @include kubeflow-news-p-navigation;
 @include kubeflow-news-p-strip;
 @include kubeflow-news-p-separator;
+@include kubeflow-news-p-card;
+@include kubeflow-news-p-icon-facebook;
+@include kubeflow-news-p-icon-twitter;

@@ -1,0 +1,6 @@
+@mixin kubeflow-news-p-card {
+  .p-card--newsletter {
+    @extend %vf-card;
+    background-color: $color-bg-newsletter;
+  }
+}
