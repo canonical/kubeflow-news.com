@@ -3,18 +3,16 @@
 {% block title %}Archives{% endblock %}
 
 {% block content %}
-  <section class="p-strip--light">
-    <div class="row u-equal-height u-vertically-center">
+  <header class="p-strip--dark" style="background-color: #23367C;">
+    <div class="row">
       <div class="col-10">
-        <h1>
-          Archives
-        </h1>
+        <h1>Archives</h1>
         <p>
           {{ total_posts }} post{{ total_posts|pluralize }}
         </p>
       </div>
     </div>
-  </section>
+  </header>
 
   <section class="p-strip">
     <div class="row">
@@ -29,7 +27,7 @@
               <p>By {{ article.author.name }}, {{ article.date }}</p>
               <p>{{ article.excerpt.raw|safe }}</p>
               <p>
-                <a href="/{{ article.slug }}">kubeflow-news.com/{{ article.slug | reverse }}</a>
+                <a href="{{ article.slug }}">Read more&nbsp;&rsaquo;</a>
               </p>
             </div>
           </div>
