@@ -2,7 +2,7 @@
   <p class="p-heading--four">
     Subscribe to our weekly newsletter
   </p>
-  <form action="https://pages.canonical.com/index.php/leadCapture/save" method="post" id="mktoForm_3415"  onsubmit="alert('submit!');return false">
+  <form action="https://pages.canonical.com/index.php/leadCapture/save" method="post" id="mktoForm_3415">
     <div>
       <label class="u-off-screen" for="Email">Work email:*</label>
       <input class="u-no-margin--bottom" id="Email" placeholder="Work email" name="Email" maxlength="255" type="email" required />
@@ -18,13 +18,11 @@
     <input type="hidden" name="lpId" value="" />
     <input type="hidden" name="munchkinId" value="066-EOV-335" />
     <input type="hidden" name="lpurl" value="" />
-    <input type="hidden" name="ret" value="{{ request.url}}?newsletter=true" />
+    <input type="hidden" name="ret" value="{{ request.url}}#newsletter=true" />
     <input type="hidden" name="cr" value="" />
     <input type="hidden" name="kw" value="" />
     <input type="hidden" name="q" value="" />
     <input type="hidden" name="thankyoumessage" value="Thank you for subscribing!<br />You will begin receiving emails as new content is posted. You may unsubscribe any time by clicking the link in the email.">
   </form>
 </div>
-<script>
 
-</script>

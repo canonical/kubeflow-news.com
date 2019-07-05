@@ -8,7 +8,7 @@
       <div class="col-10">
         <h1>Archives</h1>
         <p>
-          {% if total_posts > 0 %}
+          {% if total_posts|length > 0 %}
           {{ total_posts }} post{{ total_posts|pluralize }}
           {% else %}
           No posts
