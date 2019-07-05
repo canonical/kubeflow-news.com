@@ -27,11 +27,17 @@
             {% for article in articles[1:7] %}
               <div class="col-6">
                 {% include 'blog/_media-object.html' %}
-                <hr class="u-hide--medium u-hide--large p-separator" />
+                
+                {% if not loop.last %}
+                  <hr class="u-hide--medium u-hide--large p-separator" />
+                {% endif %}
               </div>
               {% if loop.index % 2 == 0 %}
                 </div>
-                <hr class="u-hide--small p-separator" />
+                
+                {% if not loop.last %}
+                  <hr class="u-hide--small p-separator" />
+                {% endif %}
                 <div class="row">
               {% endif %}
             {% endfor %}
