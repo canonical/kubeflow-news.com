@@ -11,6 +11,7 @@
 @import "pattern_separator";
 @import "pattern_card";
 @import "pattern_icons";
+@import "pattern_post";
 
 @include kubeflow-news-p-buttons;
 @include kubeflow-news-p-footer;
@@ -20,3 +21,4 @@
 @include kubeflow-news-p-card;
 @include kubeflow-news-p-icon-facebook;
 @include kubeflow-news-p-icon-twitter;
+@include kubeflow-news-p-post;

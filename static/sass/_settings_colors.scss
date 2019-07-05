@@ -2,4 +2,4 @@ $color-brand:             #213d7a;;
 $color-brand-light:       lighten($color-brand, 10%);
 $color-brand-dark:        darken($color-brand, 10%);
 $color-link:              #4279f4;
-$color-bg-newsletter:     #EFF6FF;
+$color-bg-newsletter:     lighten($color-brand, 75%);
