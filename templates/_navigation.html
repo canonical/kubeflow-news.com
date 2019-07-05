@@ -16,11 +16,11 @@
       </span>
 
       <ul class="p-navigation__links">
-        <li class="p-navigation__link" role="menuitem">
+        <li class="p-navigation__link{% if request.path == '/latest' %} is-selected{% endif %}" role="menuitem">
           <a href="/latest">Latest</a>
         </li>
 
-        <li class="p-navigation__link" role="menuitem">
+        <li class="p-navigation__link{% if request.path == '/archives' %} is-selected{% endif %}" role="menuitem">
           <a href="/archives">Archives</a>
         </li>
       </ul>

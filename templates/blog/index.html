@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-12">
         <h2>This week's news</h2>
-        <hr />
+        <hr class="p-separator" />
         <div class="row">
           {% for article in articles[0:1] %}
             {% include 'blog/_media-object_hero.html' %}
@@ -22,16 +22,22 @@
       <div class="row">
         <div class="col-12">
           <h2>Previous weeks news</h2>
-          <hr />
+          <hr class="p-separator" />
           <div class="row">
             {% for article in articles[1:7] %}
               <div class="col-6">
                 {% include 'blog/_media-object.html' %}
-                <hr class="u-hide--medium u-hide--large" />
+                
+                {% if not loop.last %}
+                  <hr class="u-hide--medium u-hide--large p-separator" />
+                {% endif %}
               </div>
               {% if loop.index % 2 == 0 %}
                 </div>
-                <hr class="u-hide--small" />
+                
+                {% if not loop.last %}
+                  <hr class="u-hide--small p-separator" />
+                {% endif %}
                 <div class="row">
               {% endif %}
             {% endfor %}

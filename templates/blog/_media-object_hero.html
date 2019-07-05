@@ -8,13 +8,13 @@
     {% endif %}
 
     <div class="col-8">
-      <h3>
+      <h3 class="u-no-margin--bottom">
         <a href="{{ article.slug }}">{{ article.title.rendered|safe }}</a>
       </h3>
 
       <div class="p-media-object__content">
         <p>{{ article.date }}</p>
-        <p>{{ article.excerpt.raw|safe|replace('[…]', '…')|truncate(235) }}</p>
+        <p>{{ article.excerpt.raw|safe|replace('[…]', '…')|truncate(150) }}</p>
         <a href="{{ article.slug }}">Read this week's news&nbsp;&rsaquo;</a>
       </div>
     </div>
