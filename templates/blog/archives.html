@@ -19,7 +19,7 @@
       <div class="col-8">
         {% for article in articles %}
           {% include 'blog/_media-object.html' %}
-          
+
           {% if not(loop.last) %}
             <hr class="p-separator">
           {% endif %}
@@ -27,6 +27,7 @@
       </div>
 
       <div class="col-4">
+        <hr class="u-hide--medium u-hide--large p-separator" />
         <h3>Archives</h3>
         <ul class="p-list">
           {% for year in 2018|descending_years %}
