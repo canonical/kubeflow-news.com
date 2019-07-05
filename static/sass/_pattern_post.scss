@@ -1,6 +1,6 @@
 @mixin kubeflow-news-p-post {
-  .p-post:first-child {
-    padding-top: 0rem;
-    margin-top: 0rem;
+  .p-post :first-child {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
