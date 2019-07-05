@@ -3,7 +3,11 @@
     <div class="row">
       <div class="col-7">
         {{ article.content.rendered|safe }}
-        {% include '/blog/_card-related-post.html' %}
+        
+        {% for related_article in related_articles %}
+          <hr class="p-separator" />
+          {% include 'blog/_media-object.html' %}
+        {% endfor %}
       </div>
       <div class="col-4 col-start-large-9">
         <div style="position: sticky; top: 2rem;">
