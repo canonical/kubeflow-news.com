@@ -33,7 +33,7 @@
     @include kubeflow-news-icon-twitter(#fff, $color-brand);
 
     &:hover {
-      @include kubeflow-news-icon-twitter(#fff,#1257f1);
+      @include kubeflow-news-icon-twitter(#fff, #1257f1);
     }
   }
 }
