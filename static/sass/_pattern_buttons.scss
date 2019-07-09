@@ -3,7 +3,7 @@
     background-color: #496af8;
     border-color: #496af8;
     border-radius: 20px;
-    color: #fff;
+    color: $color-x-light;
     padding-left: 1.8rem;
     padding-right: 1.8rem;
 
@@ -14,7 +14,7 @@
     }
 
     &:visited {
-      color: #fff;
+      color: $color-x-light;
     }
   }
 }

@@ -1,9 +1,9 @@
 @mixin kubeflow-news-p-strip {
-  .p-strip--newsletter {
+  .p-strip--image {
+    @extend %vf-strip;
     background-blend-mode: overlay;
     background-color: $color-brand;
     background-image: url('#{$assets-path}0c19ad2a-kubeflownews-bckg.png');
-    background-size: cover;
 
     @media (min-width: $breakpoint-medium) {
       text-align: center;
