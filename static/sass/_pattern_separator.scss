@@ -1,6 +1,7 @@
 @mixin kubeflow-news-p-separator {
   .p-separator {
     margin: $spv-outer--shallow-scaleable 0;
+
     &__mobile {
       margin: $spv-outer--shallow-scaleable 0;
       @media (min-width: $breakpoint-medium) {
