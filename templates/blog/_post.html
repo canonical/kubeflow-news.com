@@ -7,6 +7,9 @@
         {% for related_article in related_articles %}
           <hr class="p-separator" />
           {% include 'blog/_media-object.html' %}
+          {% if loop.last %}
+            <hr class="p-separator__mobile" />
+          {% endif %}
         {% endfor %}
       </div>
       <div class="col-4 col-start-large-9">
