@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import "settings_colors";
+
+@import "vanilla-framework/scss/build";
+
+@import "pattern_buttons";
+@import "pattern_footer";
+@import "pattern_navigation";
+@import "pattern_strip";
+@import "pattern_separator";
+@import "pattern_card";
+@import "pattern_icons";
+@import "pattern_post";
+@import "pattern_lists";
+@import "pattern_media";
+
+@include kubeflow-news-p-buttons;
+@include kubeflow-news-p-footer;
+@include kubeflow-news-p-navigation;
+@include kubeflow-news-p-strip;
+@include kubeflow-news-p-separator;
+@include kubeflow-news-p-card;
+@include kubeflow-news-p-icon-facebook;
+@include kubeflow-news-p-icon-twitter;
+@include kubeflow-news-p-icon-linkedin;
+@include kubeflow-news-p-post;
+@include kubeflow-news-p-lists;
+@include kubeflow-news-p-media;

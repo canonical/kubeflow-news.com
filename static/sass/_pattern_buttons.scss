@@ -1,0 +1,20 @@
+@mixin kubeflow-news-p-buttons {
+  .p-button {
+    background-color: #496af8;
+    border-color: #496af8;
+    border-radius: 20px;
+    color: $color-x-light;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+
+    &:hover,
+    &:active:hover {
+      background-color: #1257f1;
+      border-color: #1257f1;
+    }
+
+    &:visited {
+      color: $color-x-light;
+    }
+  }
+}

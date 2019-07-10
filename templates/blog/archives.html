@@ -3,15 +3,52 @@
 {% block title %}Archives{% endblock %}
 
 {% block content %}
-  <h1>Archives</h1>
+  <header class="p-strip--dark p-strip--image" style="text-align: left">
+    <div class="row">
+      <div class="col-10">
+        <h1>Archives</h1>
+        <p class="p-heading--four">
+          {% if total_posts|length > 0 %}
+          {{ total_posts }} post{{ total_posts|pluralize }}
+          {% else %}
+          No posts
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </header>
 
-  {% for article in articles %}
-    <ul>
-      <li>
-        <a href="/{{article.slug}}">
-          <h2>{{ article.title.rendered|safe }}</h1>
-        </a>
-      </li>
-    </ul>
-  {% endfor %}
+  <section class="p-strip">
+    <div class="row">
+      <div class="col-8">
+        {% for article in articles %}
+          {% include 'blog/_media-object.html' %}
+
+          {% if not(loop.last) %}
+            <hr class="p-separator">
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="col-4">
+        <hr class="u-hide--medium u-hide--large p-separator" />
+        <h3>Archives</h3>
+        <ul class="p-list">
+          {% for year in 2018|descending_years %}
+            <li class="p-list__item">
+              <h5><a class="p-link--soft" href="/archives?year={{year}}">{{year}}</a></h5>
+              <ul class="p-inline-list--middot">
+                {% for month in year|months_list %}
+                  <li class="p-inline-list__item"><a class="p-link--soft" href="/archives?year={{year}}&amp;month={{month.number}}{% if group %}&group={{group.slug}}{% endif %}">{{ month.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {% include '/blog/_pagination.html' %}
+
 {% endblock %}

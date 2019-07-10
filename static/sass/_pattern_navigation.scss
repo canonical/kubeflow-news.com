@@ -1,0 +1,18 @@
+@mixin kubeflow-news-p-navigation {
+  .p-navigation {
+    &__logo {
+      font-weight: 500;
+      height: auto;
+    }
+
+    &__link a::before {
+      @media (min-width: $breakpoint-medium) {
+        display: none;
+      }
+    }
+
+    .row {
+      grid-gap: 0;
+    }
+  }
+}

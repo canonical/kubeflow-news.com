@@ -1,6 +1,20 @@
-<article>
-  <h1>{{ article.title.rendered|safe }}</h1>
-  <div>
-    {{ article.content.rendered|safe }}
-  </div>
-</article>
+<div>
+  <article class="p-strip">
+    <div class="row">
+      <div class="col-7 p-post">
+        {{ article.content.rendered|safe }}
+        
+        {% for related_article in related_articles %}
+          <hr class="p-separator" />
+          {% include 'blog/_media-object.html' %}
+        {% endfor %}
+        <hr class="p-separator__mobile" />
+      </div>
+      <div class="col-4 col-start-large-9">
+        <div style="position: sticky; top: 2rem;">
+          {% include '/blog/_newsletter-signup-form.html' %}
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

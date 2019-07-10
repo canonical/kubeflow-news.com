@@ -1,0 +1,15 @@
+@mixin kubeflow-news-p-footer {
+  .p-footer {
+    background-color: $color-brand;
+
+    &__logo {
+      margin-right: 0.5rem;
+    }
+
+    .p-inline-list--middot {
+      .p-inline-list__item::after {
+        color: $color-x-light;
+      }
+    }
+  }
+}
