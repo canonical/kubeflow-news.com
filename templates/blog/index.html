@@ -22,7 +22,7 @@
   <section class="p-strip">
     <div class="row">
       <div class="col-7">
-        {% for article in articles[0:10] %}
+        {% for article in articles %}
           {{ article.content.rendered|safe }}
 
           {% if not loop.last %}
