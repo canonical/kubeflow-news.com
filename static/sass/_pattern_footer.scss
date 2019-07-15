@@ -3,7 +3,14 @@
     background-color: $color-brand;
 
     &__logo {
+      display: inline-block;
+      height: 24px;
       margin-right: 0.5rem;
+
+      + p {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
 
     .p-inline-list--middot {

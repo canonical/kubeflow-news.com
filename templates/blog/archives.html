@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Archives{% endblock %}
+{% block title %}Archives | Kubeflow News{% endblock %}
 
 {% block content %}
   <header class="p-strip--dark p-strip--image" style="text-align: left">
@@ -20,17 +20,22 @@
 
   <section class="p-strip">
     <div class="row">
-      <div class="col-8">
+      <div class="col-7">
         {% for article in articles %}
-          {% include 'blog/_media-object.html' %}
+          <article>
+            <h1 class="p-heading--three u-no-margin--bottom u-sv1">{{ article.title.rendered }}</h1>
+            <p>{{ article.date }}</p>
 
-          {% if not(loop.last) %}
+            {{ article.content.rendered|safe }}
+          </article>
+
+          {% if not loop.last %}
             <hr class="p-separator">
           {% endif %}
         {% endfor %}
       </div>
 
-      <div class="col-4">
+      <div class="col-4 col-start-large-9">
         <hr class="u-hide--medium u-hide--large p-separator" />
         <h3>Archives</h3>
         <ul class="p-list">

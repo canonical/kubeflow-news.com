@@ -1,8 +1,0 @@
-@mixin kubeflow-news-p-media {
-  .p-media-object__title {
-    @extend %vf-heading-4;
-    @media (min-width: $breakpoint-medium) {
-      margin-bottom: 0;
-    }
-  }
-}
