@@ -1,0 +1,11 @@
+@mixin kubeflow-news-p-article {
+  article {
+    h2 {
+      @extend %vf-heading-4;
+    }
+
+    h3 {
+      @extend %vf-heading-5;
+    }
+  }
+}

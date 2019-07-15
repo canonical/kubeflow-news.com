@@ -4,6 +4,7 @@
 
 @import "vanilla-framework/scss/build";
 
+@import "pattern_article";
 @import "pattern_buttons";
 @import "pattern_card";
 @import "pattern_footer";
@@ -12,6 +13,7 @@
 @import "pattern_separator";
 @import "pattern_strip";
 
+@include kubeflow-news-p-article;
 @include kubeflow-news-p-buttons;
 @include kubeflow-news-p-card;
 @include kubeflow-news-p-footer;
