@@ -23,7 +23,7 @@
       <div class="col-7">
         {% for article in articles %}
           <article>
-            <h1 class="p-heading--two u-no-margin--bottom">{{ article.title.rendered }}</h1>
+            <h1 class="p-heading--three u-no-margin--bottom u-sv1">{{ article.title.rendered }}</h1>
             <p>{{ article.date }}</p>
 
             {{ article.content.rendered|safe }}
@@ -35,7 +35,7 @@
         {% endfor %}
       </div>
 
-      <div class="col-5">
+      <div class="col-4 col-start-large-9">
         <hr class="u-hide--medium u-hide--large p-separator" />
         <h3>Archives</h3>
         <ul class="p-list">
