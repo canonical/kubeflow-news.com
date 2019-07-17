@@ -8,9 +8,8 @@ WORKDIR /srv
 RUN apt-get update && apt-get install --yes python3-pip
 
 # Set git commit ID
-ARG COMMIT_ID
-RUN test -n "${COMMIT_ID}"
-RUN echo "${COMMIT_ID}" > version-info.txt
+ARG TALISKER_REVISION_ID
+ENV TALISKER_REVISION_ID "${TALISKER_REVISION_ID}"
 
 # Import code, install code dependencies
 ADD . .
