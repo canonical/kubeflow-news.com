@@ -17,8 +17,8 @@ blog = BlogExtension(
     # app, "kubeflow-news.com", [3408], "kubeflow-news", "/", [3184, 3265]
     app,
     "kubeflow-news.com",
-    [1239],
-    "design",
+    [3408],
+    "kubeflow-news",
     "/",
     [3184, 3265],
 )

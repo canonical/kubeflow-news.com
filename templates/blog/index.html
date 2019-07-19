@@ -7,24 +7,24 @@
 
   <header class="p-strip--dark p-strip--image" style="text-align: left">
     <div class="row">
-      <div class="col-8">    
+      <div class="col-8">
         <h1>Kubeflow news</h1>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col-8">
         <h2 class="p-heading--four">Your weekly update of curated kubeflow news from across the web.</h2>
       </div>
     </div>
   </header>
-  
+
   <section class="p-strip">
     <div class="row">
       <div class="col-7">
         {% for article in articles %}
           <article>
-            <h1 class="p-heading--two u-no-margin--bottom u-sv1">{{ article.title.rendered }}</h1>
+            <h1 class="p-heading--two u-no-margin--bottom u-sv1">{{ article.title.rendered|safe }}</h1>
             <p>{{ article.date }}</p>
 
             {{ article.content.rendered|safe }}
