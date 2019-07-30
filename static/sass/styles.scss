@@ -24,6 +24,6 @@
 
 /*Centre images in blog posts*/
 figure {
-    @extend %max-width--p;
-    text-align: center;
-  }
+  @extend %max-width--p;
+  text-align: center;
+}
