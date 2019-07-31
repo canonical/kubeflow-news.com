@@ -22,7 +22,7 @@
 @include kubeflow-news-p-separator;
 @include kubeflow-news-p-strip;
 
-/*Centre images in blog posts*/
+// Centre images in blog posts
 figure {
   @extend %max-width--p;
   text-align: center;
