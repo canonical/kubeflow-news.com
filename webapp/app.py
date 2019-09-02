@@ -1,6 +1,7 @@
-from canonicalwebteam.blog.app import BlogExtension
-from canonicalwebteam.flask_base.app import FlaskBase
 import datetime
+from canonicalwebteam.blog import BlogViews
+from canonicalwebteam.blog.flask import build_blueprint
+from canonicalwebteam.flask_base.app import FlaskBase
 
 
 app = FlaskBase(
@@ -13,15 +14,13 @@ app = FlaskBase(
 )
 
 
-blog = BlogExtension(
-    # app, "kubeflow-news.com", [3408], "kubeflow-news", "/", [3184, 3265]
-    app,
-    "kubeflow-news.com",
-    [3408],
-    "kubeflow-news",
-    "/",
-    [3184, 3265],
+# Blog
+blog_views = BlogViews(
+    blog_title="kubeflow-news", tag_ids=[3408], excluded_tags=[3184, 3265]
 )
+
+
+app.register_blueprint(build_blueprint(blog_views), url_prefix="/")
 
 
 @app.template_filter("pluralize")
