@@ -24,6 +24,6 @@
 
 // Centre images in blog posts
 figure {
-  @extend %max-width--p;
+  max-width: map-get($max-widths, default);
   text-align: center;
 }
