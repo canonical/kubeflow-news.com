@@ -46,3 +46,13 @@ def months_list_filter(year):
         if date < now.date():
             months.append({"name": date.strftime("%b"), "number": i})
     return months
+
+from webapp.context import (
+    current_year
+)
+
+@app.context_processor
+def context():
+    return {
+        "current_year": current_year,
+    }
