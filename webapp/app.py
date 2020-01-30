@@ -2,7 +2,6 @@ import datetime
 from canonicalwebteam.blog import BlogViews
 from canonicalwebteam.blog.flask import build_blueprint
 from canonicalwebteam.flask_base.app import FlaskBase
-from webapp.context import current_year
 
 
 app = FlaskBase(
@@ -51,4 +50,4 @@ def months_list_filter(year):
 
 @app.context_processor
 def context():
-    return {"current_year": current_year}
+    return {"current_year": datetime.datetime.now().year}
