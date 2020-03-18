@@ -3,6 +3,7 @@
     justify-content: flex-end;
     margin-bottom: 0;
     text-align: right;
+
     @media (max-width: $breakpoint-medium) {
       justify-content: flex-start;
       text-align: left;

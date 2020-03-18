@@ -7,14 +7,14 @@
     padding-left: 1.8rem;
     padding-right: 1.8rem;
 
+    &:visited {
+      color: $color-x-light;
+    }
+
     &:hover,
     &:active:hover {
       background-color: #1257f1;
       border-color: #1257f1;
-    }
-
-    &:visited {
-      color: $color-x-light;
     }
   }
 }
