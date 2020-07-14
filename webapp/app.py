@@ -1,6 +1,7 @@
 import datetime
-from canonicalwebteam.blog import BlogViews
-from canonicalwebteam.blog.flask import build_blueprint
+import talisker
+
+from canonicalwebteam.blog import build_blueprint, BlogViews, Wordpress
 from canonicalwebteam.flask_base.app import FlaskBase
 
 
@@ -12,14 +13,15 @@ app = FlaskBase(
     template_404="404.html",
     template_500="500.html",
 )
-
+session = talisker.requests.get_session()
 
 # Blog
 blog_views = BlogViews(
-    blog_title="kubeflow-news", tag_ids=[3408], excluded_tags=[3184, 3265]
+    api=Wordpress(session=session),
+    blog_title="kubeflow-news",
+    tag_ids=[3408],
+    excluded_tags=[3184, 3265],
 )
-
-
 app.register_blueprint(build_blueprint(blog_views), url_prefix="/")
 
 
