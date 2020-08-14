@@ -1,6 +1,7 @@
 import datetime
-from canonicalwebteam.blog import BlogViews
-from canonicalwebteam.blog.flask import build_blueprint
+import talisker.requests
+
+from canonicalwebteam.blog import build_blueprint, BlogViews, BlogAPI
 from canonicalwebteam.flask_base.app import FlaskBase
 
 
@@ -13,10 +14,14 @@ app = FlaskBase(
     template_500="500.html",
 )
 
+session = talisker.requests.get_session()
 
 # Blog
 blog_views = BlogViews(
-    blog_title="kubeflow-news", tag_ids=[3408], excluded_tags=[3184, 3265]
+    api=BlogAPI(session=session),
+    blog_title="kubeflow-news",
+    tag_ids=[3408],
+    excluded_tags=[3184, 3265],
 )
 
 
