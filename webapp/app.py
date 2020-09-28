@@ -18,7 +18,9 @@ session = talisker.requests.get_session()
 
 # Blog
 blog_views = BlogViews(
-    api=BlogAPI(session=session),
+    api=BlogAPI(
+        session=session, api_url="https://ubuntu.com/blog/wp-json/wp/v2"
+    ),
     blog_title="kubeflow-news",
     tag_ids=[3408],
     excluded_tags=[3184, 3265],
