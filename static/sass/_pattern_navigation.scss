@@ -6,6 +6,10 @@
       padding: 0.75rem 0;
     }
 
+    &__banner {
+      padding-left: 0;
+    }
+
     &__link a::before {
       @media (min-width: $breakpoint-medium) {
         display: none;
