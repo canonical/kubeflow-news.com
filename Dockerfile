@@ -12,15 +12,18 @@ RUN --mount=type=cache,target=/root/.cache/pip pip3 install --user --requirement
 # ===
 FROM node:12-slim AS yarn-dependencies
 WORKDIR /srv
-ADD package.json .
+ADD . .
 RUN --mount=type=cache,target=/usr/local/share/.cache/yarn yarn install
 
 # Build stage: Run "yarn run build-css"
 # ===
 FROM yarn-dependencies AS build-css
-WORKDIR /srv
-COPY static/sass static/sass
-RUN yarn run build
+RUN yarn run build-css
+
+# Build stage: Run "yarn run build-js"
+# ===
+FROM yarn-dependencies AS build-js
+RUN yarn run build-js
 
 # Build the production image
 # ===
@@ -38,6 +41,7 @@ ENV PATH="/root/.local/bin:${PATH}"
 COPY . .
 RUN rm -rf package.json yarn.lock .babelrc webpack.config.js requirements.txt
 COPY --from=build-css /srv/static/css static/css
+COPY --from=build-js /srv/static/js static/js
 
 # Set revision ID
 ARG BUILD_ID

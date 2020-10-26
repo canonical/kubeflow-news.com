@@ -20,6 +20,9 @@
 @include kubeflow-news-p-separator;
 @include kubeflow-news-p-strip;
 
+// import cookie policy
+@import "@canonical/cookie-policy/build/css/cookie-policy";
+
 // Centre images in blog posts
 figure {
   max-width: map-get($max-widths, default);

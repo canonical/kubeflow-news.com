@@ -60,3 +60,4 @@ env[23]/
 
 # Project specific
 .webcache_blog
+static/js/dist/
