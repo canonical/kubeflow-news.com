@@ -60,4 +60,5 @@ env[23]/
 
 # Project specific
 .webcache_blog
-static/js/dist/
+.dotrun.json
+static/js/dist
