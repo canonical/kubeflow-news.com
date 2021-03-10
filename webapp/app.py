@@ -24,6 +24,7 @@ blog_views = BlogViews(
     blog_title="kubeflow-news",
     tag_ids=[3408],
     excluded_tags=[3184, 3265],
+    per_page=5,
 )
 
 
