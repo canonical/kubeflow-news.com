@@ -23,7 +23,7 @@
     "vanilla-framework": "2.21.0",
     "watch-cli": "0.2.3",
     "webpack": "5.26.3",
-    "webpack-cli": "3.3.12"
+    "webpack-cli": "4.5.0"
   },
   "devDependencies": {
     "babel-loader": "8.2.2",
