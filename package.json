@@ -1,6 +1,6 @@
 {
   "author": "Canonical webteam",
-  "license": "LGPL v3",
+  "license": "LGPL-3.0-or-later",
   "scripts": {
     "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle",
     "watch": "watch -p 'static/sass/**/*.scss' -c 'yarn run build'",
@@ -31,7 +31,6 @@
     "postcss": "8.2.4",
     "stylelint": "13.8.0",
     "stylelint-config-standard": "20.0.0",
-    "stylelint-order": "4.1.0",
-    "terser-webpack-plugin": "5.1.1"
+    "stylelint-order": "4.1.0"
   }
 }
