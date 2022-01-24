@@ -14,9 +14,9 @@
 
     <div class="row">
       <div class="col-8">
-        <h2 class="p-heading--four">Your weekly update of curated kubeflow news from across the web.</h2>
+        <h2 class="p-heading--4">Your weekly update of curated kubeflow news from across the web.</h2>
         <p class="u-no-padding--top">
-          <a class="p-link--inverted p-link--external" href="mailto:contact@kubeflow-news.com">Contact us with your kubeflow news</a>
+          <a class="p-link--inverted" href="mailto:contact@kubeflow-news.com">Contact us with your kubeflow news</a>
         </p>
       </div>
     </div>
@@ -27,7 +27,7 @@
       <div class="col-7">
         {% for article in articles %}
           <article>
-            <h1 class="p-heading--two u-no-margin--bottom u-sv1">{{ article.title.rendered|safe }}</h1>
+            <h1 class="p-heading--2 u-no-margin--bottom u-sv1">{{ article.title.rendered|safe }}</h1>
             <p>{{ article.date }}</p>
 
             {{ article.content.rendered|safe }}

@@ -4,13 +4,13 @@
     margin-bottom: 0;
     text-align: right;
 
-    @media (max-width: $breakpoint-medium) {
+    @media (max-width: $breakpoint-small) {
       justify-content: flex-start;
       text-align: left;
     }
 
     :first-child {
-      @media (max-width: $breakpoint-medium) {
+      @media (max-width: $breakpoint-small) {
         margin-right: 0;
       }
     }
