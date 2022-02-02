@@ -1,2 +1,2 @@
-canonicalwebteam.flask_base==0.9.3
+canonicalwebteam.flask_base==1.0.0
 canonicalwebteam.blog==6.4.0
