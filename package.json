@@ -16,7 +16,7 @@
     "test-python": "python3 -m unittest discover tests"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.3.0",
+    "@canonical/cookie-policy": "3.4.0",
     "autoprefixer": "10.4.1",
     "sass": "1.46.0",
     "postcss-cli": "8.3.1",
