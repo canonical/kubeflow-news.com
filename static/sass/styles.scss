@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @import "settings_colors";
-@import "vanilla-framework/scss/build";
+@import "vanilla-framework";
 @import "pattern_article";
 @import "pattern_buttons";
 @import "pattern_card";
@@ -11,6 +11,7 @@
 @import "pattern_separator";
 @import "pattern_strip";
 
+@include vanilla;
 @include kubeflow-news-p-article;
 @include kubeflow-news-p-buttons;
 @include kubeflow-news-p-card;
@@ -25,6 +26,6 @@
 
 // Centre images in blog posts
 figure {
-  max-width: map-get($max-widths, default);
+  max-width: $text-max-width;
   text-align: center;
 }

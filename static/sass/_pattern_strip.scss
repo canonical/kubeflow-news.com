@@ -6,7 +6,7 @@
     background-color: $color-brand;
     background-image: url('#{$assets-path}0c19ad2a-kubeflownews-bckg.png');
 
-    @media (min-width: $breakpoint-medium) {
+    @media (min-width: $breakpoint-small) {
       text-align: center;
     }
 
