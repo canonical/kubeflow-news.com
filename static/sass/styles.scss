@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 @import "settings_colors";
 @import "vanilla-framework";
 @import "pattern_article";
@@ -10,7 +8,6 @@
 @import "pattern_navigation";
 @import "pattern_separator";
 @import "pattern_strip";
-
 @include vanilla;
 @include kubeflow-news-p-article;
 @include kubeflow-news-p-buttons;
