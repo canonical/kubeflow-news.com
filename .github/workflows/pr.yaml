@@ -8,7 +8,7 @@ jobs:
   run-image:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Build image
         run: DOCKER_BUILDKIT=1 docker build --tag kubeflow-news.com .
       - name: Run image
@@ -19,7 +19,7 @@ jobs:
   run-serve:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Node dependencies
         run: yarn install
@@ -39,7 +39,7 @@ jobs:
   lint-python:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Node dependencies
         run: yarn install
@@ -55,7 +55,7 @@ jobs:
   lint-scss:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Node dependencies
         run: yarn install
@@ -66,7 +66,7 @@ jobs:
   test-python:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Node dependencies
         run: yarn install
@@ -89,7 +89,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Check inclusive naming
         uses: canonical-web-and-design/inclusive-naming@main
