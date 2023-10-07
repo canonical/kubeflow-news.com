@@ -31,7 +31,7 @@
     "babel-eslint": "10.1.0",
     "babel-loader": "9.1.2",
     "concurrently": "7.6.0",
-    "postcss": "8.4.21",
+    "postcss": "8.4.31",
     "stylelint": "15.10.1",
     "stylelint-config-standard-scss": "6.1.0",
     "stylelint-order": "6.0.1"
