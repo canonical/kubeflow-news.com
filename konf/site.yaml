@@ -1,6 +1,6 @@
 domain: kubeflow-news.com
 
-image: prod-comms.docker-registry.canonical.com/kubeflow-news.com
+image: prod-comms.ps5.docker-registry.canonical.com/kubeflow-news.com
 
 env:
   - name: SENTRY_DSN
