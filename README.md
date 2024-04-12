@@ -3,6 +3,10 @@
 
 This is the repo for the [kubeflow-news website](https://kubeflow-news.com).
 
+## Update
+
+Archived Repository: This project is no longer active and has been archived. It is no longer maintained or updated, and is available for reference purposes only.
+
 ## Usage
 
 After [installing Docker](https://docs.docker.com/install/):
